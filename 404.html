@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>xXpyrotech219Xx — Gamer • Streamer • Operator</title>
+<meta name="description" content="Official hub for xXpyrotech219Xx. Watch live on Kick, join the Discord, and connect across YouTube, Twitch, and Facebook." />
+<meta property="og:title" content="xXpyrotech219Xx — Gamer • Streamer • Operator" />
+<meta property="og:description" content="Live streams, social links, and Discord squad-up for xXpyrotech219Xx." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="logo.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="logo.png" />
+<link rel="icon" href="logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Stardos+Stencil:wght@400;700&family=Rajdhani:wght@400;500;600;700&display=swap" />
+<style>
+:root{
+  --bg:#1a1612; --fg:#ece7df; --muted:#9a948a; --card:#231e18; --card2:#2a2419;
+  --border:#3b3327; --input:#241f17;
+  --primary:#ff7a1a; --primary-fg:#1a1108; --accent:#ffc857;
+  --discord:#5865f2;
+  --shadow:0 0 40px rgba(255,122,26,.45);
+  --deep:0 20px 50px -10px rgba(0,0,0,.7);
+}
+*{box-sizing:border-box;border-color:var(--border)}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg);color:var(--fg);font-family:'Rajdhani',system-ui,sans-serif;
+  background-image:
+    radial-gradient(ellipse at top, rgba(255,122,26,.15), transparent 60%),
+    radial-gradient(ellipse at bottom, rgba(180,40,20,.10), transparent 60%);
+  background-attachment:fixed;min-height:100vh;overflow-x:hidden;
+}
+h1,h2,h3,h4{font-family:'Black Ops One',Impact,sans-serif;letter-spacing:.02em;margin:0}
+a{color:inherit;text-decoration:none}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.stencil{font-family:'Stardos Stencil','Oswald',sans-serif;letter-spacing:.18em;text-transform:uppercase}
+.clip{clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,14px 100%,0 calc(100% - 14px))}
+.grid-bg{background-image:
+  linear-gradient(rgba(255,122,26,.06) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(255,122,26,.06) 1px,transparent 1px);
+  background-size:40px 40px;}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
+  background:rgba(26,22,18,.8);border-bottom:1px solid var(--border)}
+.nav-inner{height:64px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{height:40px;width:40px;object-fit:contain;filter:drop-shadow(0 0 8px rgba(255,122,26,.6))}
+.brand span{font-size:13px;color:var(--primary)}
+nav.links a{padding:8px 12px;font-size:12px;transition:color .15s}
+nav.links a:hover{color:var(--primary)}
+
+/* hero */
+.hero{position:relative;padding:64px 0 96px}
+.hero-overlay{position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(15,12,8,.3),rgba(15,12,8,.95))}
+.hero-grid{position:relative;display:grid;gap:40px;align-items:center;grid-template-columns:1fr}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.1fr 1fr}}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;
+  border:1px solid rgba(255,122,26,.4);background:rgba(255,122,26,.1);
+  font-size:11px;color:var(--primary);margin-bottom:20px}
+.badge .dot{width:8px;height:8px;border-radius:50%;background:var(--primary);animation:pulse 1.8s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,122,26,.7)}50%{box-shadow:0 0 0 12px rgba(255,122,26,0)}}
+h1.title{font-size:clamp(40px,7vw,80px);line-height:.95}
+h1.title .accent{color:var(--primary)}
+.sub-tag{color:var(--accent);margin:14px 0 0;font-size:13px}
+.lede{margin-top:20px;font-size:18px;color:var(--muted);max-width:540px;line-height:1.6}
+.cta-row{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
+.btn{font-family:'Stardos Stencil',sans-serif;letter-spacing:.18em;text-transform:uppercase;
+  font-size:13px;padding:14px 24px;border:0;cursor:pointer;transition:filter .2s,transform .2s;display:inline-flex;align-items:center;gap:8px}
+.btn-primary{background:var(--primary);color:var(--primary-fg);box-shadow:var(--shadow)}
+.btn-primary:hover{filter:brightness(1.1)}
+.btn-ghost{background:#2e2718;color:var(--fg);border:1px solid var(--border)}
+.btn-ghost:hover{border-color:var(--primary)}
+.hero-art{position:relative;display:flex;justify-content:center}
+.hero-art::before{content:"";position:absolute;inset:0;filter:blur(60px);opacity:.6;
+  background:radial-gradient(circle,rgba(255,122,26,.5),transparent 70%)}
+.hero-art img{position:relative;width:100%;max-width:440px;animation:flicker 4s infinite;
+  filter:drop-shadow(0 10px 40px rgba(0,0,0,.8))}
+@keyframes flicker{0%,100%{opacity:1}45%{opacity:.85}50%{opacity:.6}55%{opacity:.95}}
+
+/* sections */
+section.sec{padding:80px 0;border-top:1px solid var(--border)}
+.sec.alt{background:rgba(26,22,18,.4)}
+.eyebrow{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--primary)}
+.eyebrow .line{width:32px;height:1px;background:var(--primary)}
+h2.section-title{font-size:clamp(28px,4vw,40px);margin:12px 0 12px}
+.section-sub{color:var(--muted);max-width:600px}
+
+/* live */
+.player{margin-top:40px;position:relative;border:1px solid var(--border);background:var(--card);box-shadow:var(--deep)}
+.player-bar{display:flex;align-items:center;justify-content:space-between;padding:8px 16px;background:rgba(15,12,8,.6);border-bottom:1px solid var(--border)}
+.player-bar .lbl{display:flex;align-items:center;gap:8px;font-size:11px;font-family:'Stardos Stencil',sans-serif;letter-spacing:.18em;text-transform:uppercase}
+.player-bar .lbl .dot{width:10px;height:10px;border-radius:50%;background:var(--primary);animation:pulse 1.8s infinite}
+.player-bar .lbl .lit{color:var(--primary)}
+.player-bar .lbl .url{color:var(--muted)}
+.player-bar a{font-size:11px;color:var(--accent);font-family:'Stardos Stencil',sans-serif;letter-spacing:.18em;text-transform:uppercase}
+.player-bar a:hover{color:var(--primary)}
+.player-frame{position:relative;width:100%;aspect-ratio:16/9;background:#000}
+.player-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* socials grid */
+.socials{margin-top:40px;display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:600px){.socials{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.socials{grid-template-columns:repeat(3,1fr)}}
+.social{position:relative;border:1px solid var(--border);background:var(--card);padding:20px;
+  transition:transform .2s,border-color .2s;overflow:hidden}
+.social:hover{transform:translateY(-4px);border-color:var(--primary)}
+.social .row{display:flex;align-items:center;gap:16px;position:relative}
+.social .icon{height:48px;width:48px;display:grid;place-items:center;color:#fff;border-radius:3px}
+.social .name{font-family:'Stardos Stencil',sans-serif;letter-spacing:.18em;text-transform:uppercase;font-size:11px;color:var(--muted)}
+.social .handle{font-weight:600;color:var(--fg);margin-top:2px}
+.social .arrow{margin-left:auto;color:var(--primary);opacity:0;transition:opacity .2s}
+.social:hover .arrow{opacity:1}
+.bg-kick{background:linear-gradient(135deg,#53fc18,#2bb010)}
+.bg-twitch{background:linear-gradient(135deg,#9146ff,#5c2cb3)}
+.bg-youtube{background:linear-gradient(135deg,#ff3030,#a51e1e)}
+.bg-facebook{background:linear-gradient(135deg,#1877f2,#0d4e9f)}
+.bg-discord{background:linear-gradient(135deg,#5865f2,#3741b1)}
+
+/* discord block */
+.discord-card{position:relative;overflow:hidden;border:1px solid var(--border);
+  padding:40px;background:linear-gradient(135deg,#1f1c33,#1c1812)}
+@media(min-width:900px){.discord-card{padding:56px}}
+.discord-card .glow{position:absolute;top:-80px;right:-80px;height:280px;width:280px;border-radius:50%;
+  filter:blur(60px);background:rgba(88,101,242,.4)}
+.discord-grid{position:relative;display:grid;gap:32px;grid-template-columns:1fr;align-items:center}
+@media(min-width:900px){.discord-grid{grid-template-columns:1.2fr 1fr}}
+.discord-card h2{font-size:clamp(32px,4vw,48px);margin-top:8px}
+.discord-card p{color:var(--muted);margin:16px 0 24px;max-width:520px}
+.dc-mini{border:1px solid var(--border);background:rgba(15,12,8,.7);backdrop-filter:blur(8px);padding:24px}
+.dc-mini .head{display:flex;align-items:center;gap:12px}
+.dc-mini .head .ico{height:48px;width:48px;display:grid;place-items:center;background:#5865f2;color:#fff;border-radius:3px}
+.dc-mini .head .name{font-weight:600}
+.dc-mini .head .inv{font-size:11px;color:var(--muted);font-family:'Stardos Stencil',sans-serif;letter-spacing:.18em;text-transform:uppercase}
+.dc-channels{margin-top:20px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.dc-channels div{border:1px solid var(--border);padding:12px;text-align:center}
+.dc-channels .c{font-size:10px;color:var(--primary);font-family:'Stardos Stencil',sans-serif;letter-spacing:.18em;text-transform:uppercase}
+.dc-channels .l{font-size:12px;color:var(--muted);margin-top:4px}
+
+/* contact */
+.contact-wrap{max-width:720px;margin:0 auto}
+form.contact{margin-top:40px;border:1px solid var(--border);background:var(--card);padding:28px;box-shadow:var(--deep)}
+.field{display:block;margin-bottom:20px}
+.field label{display:block;font-family:'Stardos Stencil',sans-serif;letter-spacing:.18em;text-transform:uppercase;font-size:11px;color:var(--primary);margin-bottom:8px}
+.field input,.field textarea{width:100%;background:var(--input);color:var(--fg);
+  border:1px solid var(--border);padding:12px 16px;font-family:inherit;font-size:15px;outline:none;transition:border-color .2s}
+.field input:focus,.field textarea:focus{border-color:var(--primary)}
+.field textarea{resize:none}
+.counter{font-size:10px;color:var(--muted);text-align:right;margin-top:4px;font-family:'Stardos Stencil',sans-serif;letter-spacing:.18em}
+.form-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;padding-top:8px}
+.form-foot a{font-size:11px;color:var(--muted);font-family:'Stardos Stencil',sans-serif;letter-spacing:.18em;text-transform:uppercase}
+.form-foot a:hover{color:var(--primary)}
+
+footer{border-top:1px solid var(--border);padding:40px 0}
+.foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+.foot .left{display:flex;align-items:center;gap:12px}
+.foot .left img{height:32px;width:32px}
+.foot .left span{font-size:11px;color:var(--muted);font-family:'Stardos Stencil',sans-serif;letter-spacing:.18em;text-transform:uppercase}
+.foot .right{display:flex;gap:16px}
+.foot .right a{color:var(--muted);transition:color .2s}
+.foot .right a:hover{color:var(--primary)}
+.foot .right svg{height:20px;width:20px}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="brand">
+      <img src="logo.png" alt="xXpyrotech219Xx logo" />
+      <span class="stencil">Pyrotech219</span>
+    </a>
+    <nav class="links stencil">
+      <a href="#live">Live</a>
+      <a href="#socials">Socials</a>
+      <a href="#discord">Discord</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section id="top" class="hero grid-bg">
+  <div class="hero-overlay"></div>
+  <div class="container hero-grid">
+    <div>
+      <div class="badge stencil"><span class="dot"></span> Operator Profile • Active Duty</div>
+      <h1 class="title">xX<span class="accent">PYROTECH</span>219Xx</h1>
+      <p class="sub-tag stencil">Killstreaks • Live Ops • Community</p>
+      <p class="lede">Welcome to the war room. Drop into my streams, squad up on Discord, and lock in with the crew across every platform.</p>
+      <div class="cta-row">
+        <a href="#live" class="btn btn-primary clip">Watch Live</a>
+        <a href="https://discord.gg/ve5VfU3" target="_blank" rel="noreferrer" class="btn btn-ghost clip">Join Discord</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="logo.png" alt="xXpyrotech219Xx mascot" />
+    </div>
+  </div>
+</section>
+
+<section id="live" class="sec">
+  <div class="container">
+    <div class="eyebrow stencil"><span class="line"></span> Live Feed</div>
+    <h2 class="section-title">On The Battlefield</h2>
+    <p class="section-sub">Streaming live on Kick. If the feed is dark, the operator is off-duty — check back soon.</p>
+    <div class="player clip">
+      <div class="player-bar">
+        <div class="lbl"><span class="dot"></span><span class="lit">LIVE FEED</span><span class="url">// kick.com/xxpyrotech219xx</span></div>
+        <a href="https://kick.com/xxpyrotech219xx" target="_blank" rel="noreferrer">Open ↗</a>
+      </div>
+      <div class="player-frame">
+        <iframe src="https://player.kick.com/xxpyrotech219xx?muted=true&autoplay=false" allowfullscreen title="Kick live stream"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="socials" class="sec alt">
+  <div class="container">
+    <div class="eyebrow stencil"><span class="line"></span> Comms Channels</div>
+    <h2 class="section-title">Find Me Everywhere</h2>
+    <p class="section-sub">Lock in across every platform. New drops, clips, and live ops on the regular.</p>
+    <div class="socials">
+      <a class="social clip" target="_blank" rel="noreferrer" href="https://kick.com/xxpyrotech219xx">
+        <div class="row"><div class="icon bg-kick"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M3 3h5v5h2V3h5l-5 5v2h2l5 5h-5v3h-2v-3H8v5H3V3z"/></svg></div>
+        <div><div class="name">Kick</div><div class="handle">/xxpyrotech219xx</div></div><div class="arrow">→</div></div>
+      </a>
+      <a class="social clip" target="_blank" rel="noreferrer" href="https://www.twitch.tv/xxpyrotech219xx">
+        <div class="row"><div class="icon bg-twitch"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M4 2l-2 4v14h6v2h4l2-2h4l4-4V2H4zm16 11l-3 3h-4l-2 2v-2H7V4h13v9zM11 7h2v5h-2V7zm5 0h2v5h-2V7z"/></svg></div>
+        <div><div class="name">Twitch</div><div class="handle">/xxpyrotech219xx</div></div><div class="arrow">→</div></div>
+      </a>
+      <a class="social clip" target="_blank" rel="noreferrer" href="https://www.youtube.com/@xXpyrotech219Xx">
+        <div class="row"><div class="icon bg-youtube"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M23 7.5s-.2-1.6-.9-2.3c-.8-.9-1.7-.9-2.2-1C16.7 4 12 4 12 4s-4.7 0-7.9.2c-.4 0-1.3.1-2.2 1C1.2 5.9 1 7.5 1 7.5S.8 9.4.8 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.8.9 2 .9 2.5 1 1.8.2 7.6.2 7.6.2s4.7 0 7.9-.2c.4 0 1.3-.1 2.2-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.7 15.2V8.4l6.2 3.4-6.2 3.4z"/></svg></div>
+        <div><div class="name">YouTube</div><div class="handle">@xXpyrotech219Xx</div></div><div class="arrow">→</div></div>
+      </a>
+      <a class="social clip" target="_blank" rel="noreferrer" href="https://www.facebook.com/profile.php?id=100088581481922">
+        <div class="row"><div class="icon bg-facebook"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.3-1.5 1.6-1.5h1.7V4.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.4V14h2.7v8h3.4z"/></svg></div>
+        <div><div class="name">Facebook</div><div class="handle">Pyrotech219</div></div><div class="arrow">→</div></div>
+      </a>
+      <a class="social clip" target="_blank" rel="noreferrer" href="https://discord.gg/ve5VfU3">
+        <div class="row"><div class="icon bg-discord"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M20 4.3A19 19 0 0015.4 3l-.2.4a17 17 0 00-6.4 0L8.6 3A19 19 0 004 4.3C1.4 8.1.7 11.8 1 15.5a19 19 0 005.8 2.9l.5-.7c-.9-.3-1.7-.7-2.5-1.2.2-.2.4-.3.6-.5a13.7 13.7 0 0011.2 0c.2.2.4.3.6.5-.8.5-1.6.9-2.5 1.2l.5.7a19 19 0 005.8-2.9c.4-4.3-.6-8-3-11.2zM8.7 13.7c-1.1 0-2-1-2-2.3s.9-2.3 2-2.3 2 1 2 2.3-.9 2.3-2 2.3zm6.6 0c-1.1 0-2-1-2-2.3s.9-2.3 2-2.3 2 1 2 2.3-.9 2.3-2 2.3z"/></svg></div>
+        <div><div class="name">Discord</div><div class="handle">Join the squad</div></div><div class="arrow">→</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="discord" class="sec">
+  <div class="container">
+    <div class="discord-card clip">
+      <div class="glow"></div>
+      <div class="discord-grid">
+        <div>
+          <div class="eyebrow stencil" style="color:var(--accent)"><span class="line" style="background:var(--accent)"></span> Squad Hub</div>
+          <h2>Join The Discord</h2>
+          <p>Real-time squad-ups, custom lobbies, clip sharing, giveaways, and notifications when I go live. The crew runs deep — come post up.</p>
+          <a href="https://discord.gg/ve5VfU3" target="_blank" rel="noreferrer" class="btn btn-primary clip">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20 4.3A19 19 0 0015.4 3l-.2.4a17 17 0 00-6.4 0L8.6 3A19 19 0 004 4.3C1.4 8.1.7 11.8 1 15.5a19 19 0 005.8 2.9l.5-.7c-.9-.3-1.7-.7-2.5-1.2.2-.2.4-.3.6-.5a13.7 13.7 0 0011.2 0c.2.2.4.3.6.5-.8.5-1.6.9-2.5 1.2l.5.7a19 19 0 005.8-2.9c.4-4.3-.6-8-3-11.2zM8.7 13.7c-1.1 0-2-1-2-2.3s.9-2.3 2-2.3 2 1 2 2.3-.9 2.3-2 2.3zm6.6 0c-1.1 0-2-1-2-2.3s.9-2.3 2-2.3 2 1 2 2.3-.9 2.3-2 2.3z"/></svg>
+            Enlist Now
+          </a>
+        </div>
+        <div>
+          <div class="dc-mini clip">
+            <div class="head">
+              <div class="ico"><svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M20 4.3A19 19 0 0015.4 3l-.2.4a17 17 0 00-6.4 0L8.6 3A19 19 0 004 4.3C1.4 8.1.7 11.8 1 15.5a19 19 0 005.8 2.9l.5-.7c-.9-.3-1.7-.7-2.5-1.2.2-.2.4-.3.6-.5a13.7 13.7 0 0011.2 0c.2.2.4.3.6.5-.8.5-1.6.9-2.5 1.2l.5.7a19 19 0 005.8-2.9c.4-4.3-.6-8-3-11.2zM8.7 13.7c-1.1 0-2-1-2-2.3s.9-2.3 2-2.3 2 1 2 2.3-.9 2.3-2 2.3zm6.6 0c-1.1 0-2-1-2-2.3s.9-2.3 2-2.3 2 1 2 2.3-.9 2.3-2 2.3z"/></svg></div>
+              <div><div class="name">Pyrotech219 HQ</div><div class="inv">discord.gg/ve5VfU3</div></div>
+            </div>
+            <div class="dc-channels">
+              <div class="clip"><div class="c">#general</div><div class="l">Comms</div></div>
+              <div class="clip"><div class="c">#lfg</div><div class="l">Squad-Up</div></div>
+              <div class="clip"><div class="c">#clips</div><div class="l">Highlights</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="sec alt">
+  <div class="container contact-wrap">
+    <div class="eyebrow stencil"><span class="line"></span> Incoming Transmission</div>
+    <h2 class="section-title">Send A Message</h2>
+    <p class="section-sub">Business inquiries, collabs, or just say what's up. Direct line: contact@xxpyrotech219xx.com</p>
+    <form class="contact clip" onsubmit="return sendMail(event)">
+      <div class="field">
+        <label>Callsign / Name</label>
+        <input id="f-name" type="text" maxlength="80" required placeholder="Your name" class="clip" />
+      </div>
+      <div class="field">
+        <label>Subject</label>
+        <input id="f-subject" type="text" maxlength="120" placeholder="Collab / Sponsorship / Other" class="clip" />
+      </div>
+      <div class="field">
+        <label>Message</label>
+        <textarea id="f-msg" rows="6" maxlength="2000" required placeholder="Drop your message here..." class="clip" oninput="document.getElementById('count').textContent=this.value.length"></textarea>
+        <div class="counter"><span id="count">0</span>/2000</div>
+      </div>
+      <div class="form-foot">
+        <a href="mailto:contact@xxpyrotech219xx.com">contact@xxpyrotech219xx.com</a>
+        <button type="submit" class="btn btn-primary clip">Transmit →</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container foot">
+    <div class="left">
+      <img src="logo.png" alt="logo" />
+      <span id="copy"></span>
+    </div>
+    <div class="right">
+      <a href="https://kick.com/xxpyrotech219xx" target="_blank" rel="noreferrer" aria-label="Kick"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h5v5h2V3h5l-5 5v2h2l5 5h-5v3h-2v-3H8v5H3V3z"/></svg></a>
+      <a href="https://www.twitch.tv/xxpyrotech219xx" target="_blank" rel="noreferrer" aria-label="Twitch"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 2l-2 4v14h6v2h4l2-2h4l4-4V2H4zm16 11l-3 3h-4l-2 2v-2H7V4h13v9zM11 7h2v5h-2V7zm5 0h2v5h-2V7z"/></svg></a>
+      <a href="https://www.youtube.com/@xXpyrotech219Xx" target="_blank" rel="noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5s-.2-1.6-.9-2.3c-.8-.9-1.7-.9-2.2-1C16.7 4 12 4 12 4s-4.7 0-7.9.2c-.4 0-1.3.1-2.2 1C1.2 5.9 1 7.5 1 7.5S.8 9.4.8 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.8.9 2 .9 2.5 1 1.8.2 7.6.2 7.6.2s4.7 0 7.9-.2c.4 0 1.3-.1 2.2-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.7 15.2V8.4l6.2 3.4-6.2 3.4z"/></svg></a>
+      <a href="https://www.facebook.com/profile.php?id=100088581481922" target="_blank" rel="noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.3-1.5 1.6-1.5h1.7V4.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.4V14h2.7v8h3.4z"/></svg></a>
+      <a href="https://discord.gg/ve5VfU3" target="_blank" rel="noreferrer" aria-label="Discord"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4.3A19 19 0 0015.4 3l-.2.4a17 17 0 00-6.4 0L8.6 3A19 19 0 004 4.3C1.4 8.1.7 11.8 1 15.5a19 19 0 005.8 2.9l.5-.7c-.9-.3-1.7-.7-2.5-1.2.2-.2.4-.3.6-.5a13.7 13.7 0 0011.2 0c.2.2.4.3.6.5-.8.5-1.6.9-2.5 1.2l.5.7a19 19 0 005.8-2.9c.4-4.3-.6-8-3-11.2zM8.7 13.7c-1.1 0-2-1-2-2.3s.9-2.3 2-2.3 2 1 2 2.3-.9 2.3-2 2.3zm6.6 0c-1.1 0-2-1-2-2.3s.9-2.3 2-2.3 2 1 2 2.3-.9 2.3-2 2.3z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('copy').textContent = '© ' + new Date().getFullYear() + ' xXpyrotech219Xx — All rights reserved';
+function sendMail(e){
+  e.preventDefault();
+  var name=(document.getElementById('f-name').value||'').trim().slice(0,80);
+  var sub=(document.getElementById('f-subject').value||'').trim().slice(0,120) || ('Message from '+(name||'a viewer'));
+  var msg=(document.getElementById('f-msg').value||'').trim().slice(0,2000);
+  var body=msg+'\n\n— '+(name||'Anonymous');
+  window.location.href='mailto:contact@xxpyrotech219xx.com?subject='+encodeURIComponent(sub)+'&body='+encodeURIComponent(body);
+  return false;
+}
+</script>
+</body>
+</html>
